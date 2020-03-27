@@ -1,17 +1,17 @@
-# https://romanostapchuk.github.io/mesto/
+# https://romanostapchuk.github.io/mesto/index.html
 
-## v0.0.1
+## v0.0.3
 
-### Проект RegExp создан для проверки умения использовать регулярные выражения для валидации форм.
+### Проект Mesto создан для демонстрации умения работы с webpack
 
 ### Разработка
 
-Выполнить команду npm run dev. Запуститься сервер для разработки
+Выполнить команду npm run dev. Запустится сервер для разработки.
 
 ### Сборка 
 
-Команда npm run build. Cоздает папку дист
+Команда npm run build. Cоздает папку dist с файлами сборки.
 
 ### Разворачивание проекта
 
-Команда npm run deploy Создает branch gh-pages
+Команда npm run deploy. Создает branch gh-pages.
