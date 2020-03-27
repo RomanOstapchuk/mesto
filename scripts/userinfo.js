@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
   constructor(container, name, about, avatar, api) {
     this.container = container;
     this.api = api;
@@ -19,7 +19,7 @@ class UserInfo {
     //
     // this?
     //
-    userInfoPhoto.setAttribute('style', `background-image: url(${avatar})`);
+    this.userInfoPhoto.setAttribute('style', `background-image: url(${avatar})`);
   }
 
   updateUserInfo(name, about) {

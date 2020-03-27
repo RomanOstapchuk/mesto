@@ -1,6 +1,10 @@
 import "../pages/index.css";
 import {Api} from "./api";
-import {PopupImg} from "./popup";
+import {PopupImg, PopupEditCard, PopupAddCard} from "./popup";
+import {Card} from "./card";
+import {UserInfo} from "./userinfo";
+import {CardList} from "./cardList";
+import {FormValidator} from "./formValidator";
 
 const rootPage = document.querySelector('.root');
 const placesList = rootPage.querySelector('.places-list');
@@ -17,8 +21,12 @@ const userInfoPhoto = rootPage.querySelector('.user-info__photo');
 
 const addCardButton = rootPage.querySelector('.user-info__button');
 const userInfoEditButton = rootPage.querySelector('.user-info__edit');
+let BASEURL = 'https://praktikum.tk/cohort8';
+if (process.env.NODE_ENV === 'development') {
+  BASEURL = 'http://praktikum.tk/cohort8';
+}
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort8',
+  baseUrl: BASEURL,
   headers: {
     authorization: '32349a2d-13f0-40c4-958a-8599f4405ab4',
     'Content-Type': 'application/json'
