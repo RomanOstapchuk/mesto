@@ -14,7 +14,7 @@ class Popup {
   }
 }
 
-class PopupImg extends Popup {
+export class PopupImg extends Popup {
   open(src) {
     this.popup.querySelector('.popup-img__image').src = src;
     super.open();

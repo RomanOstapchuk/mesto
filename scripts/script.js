@@ -1,3 +1,7 @@
+import "../pages/index.css";
+import {Api} from "./api";
+import {PopupImg} from "./popup";
+
 const rootPage = document.querySelector('.root');
 const placesList = rootPage.querySelector('.places-list');
 const popupForm = rootPage.querySelector('.popup');
