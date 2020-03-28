@@ -1,10 +1,7 @@
-class UserInfo {
-  constructor(container, name, about, avatar, api) {
+export class UserInfo {
+  constructor(container, api) {
     this.container = container;
     this.api = api;
-    this.name = name;
-    this.about = about;
-    this.avatar = avatar;
   }
 
   setUserInfo(name, about, avatar) {
@@ -19,7 +16,7 @@ class UserInfo {
     //
     // this?
     //
-    userInfoPhoto.setAttribute('style', `background-image: url(${avatar})`);
+    this.userInfoPhoto.setAttribute('style', `background-image: url(${avatar})`);
   }
 
   updateUserInfo(name, about) {
@@ -29,7 +26,7 @@ class UserInfo {
     //
     // this у api???
     //
-    return api.sendUserInfo(name, about)
+    return this.api.sendUserInfo(name, about)
       .then(({name, about}) => {
         this.name = name;
         this.about = about;

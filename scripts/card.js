@@ -1,10 +1,10 @@
-class Card {   
+export class Card {   
     like(event) {
         event.target.classList.toggle('place-card__like-icon_liked');
     }
 
     remove(event) {
-        placesList.removeChild(event.target.closest('.place-card'));
+        event.target.closest('.place-card').remove();
     }
 
     create(card) {

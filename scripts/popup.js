@@ -14,7 +14,7 @@ class Popup {
   }
 }
 
-class PopupImg extends Popup {
+export class PopupImg extends Popup {
   open(src) {
     this.popup.querySelector('.popup-img__image').src = src;
     super.open();
@@ -34,7 +34,7 @@ class PopupWithForm extends Popup {
   }
 }
 
-class PopupAddCard extends PopupWithForm {
+export class PopupAddCard extends PopupWithForm {
   constructor(popup, cardList) {
     super(popup);
     this.cardList = cardList;
@@ -54,7 +54,7 @@ class PopupAddCard extends PopupWithForm {
   }
 }
 
-class PopupEditCard extends PopupWithForm {
+export class PopupEditCard extends PopupWithForm {
   constructor(popup, userInfo, api) {
     super(popup);
     this.userInfo = userInfo;
