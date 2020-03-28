@@ -1,10 +1,7 @@
 export class UserInfo {
-  constructor(container, name, about, avatar, api) {
+  constructor(container, api) {
     this.container = container;
     this.api = api;
-    this.name = name;
-    this.about = about;
-    this.avatar = avatar;
   }
 
   setUserInfo(name, about, avatar) {
@@ -29,7 +26,7 @@ export class UserInfo {
     //
     // this у api???
     //
-    return api.sendUserInfo(name, about)
+    return this.api.sendUserInfo(name, about)
       .then(({name, about}) => {
         this.name = name;
         this.about = about;
